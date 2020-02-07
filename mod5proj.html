@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<meta charset="UTF-8">
+<title>jQuery Mobile Web App</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<link rel="stylesheet" href="themes/mod5project.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.5.min.js"></script>
+
+<script>
+
+function createItem() {
+  localStorage.setItem("mytime", "fav1" + ",fav2" + ",fav3")
+}
+
+function myFunction() {
+  var x = localStorage.getItem("mytime");
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+<script>
+// Check if the localStorage object exists
+if(localStorage) {
+	$(document).ready(function() {
+		$(".save").click(function() {
+			// Get input name
+			var favitem = $("#favitem").val();
+
+			// Store data
+    		localStorage.setItem("favitem", favitem);
+			alert("Your fav item is saved.");
+		});
+		$(".access").click(function() {
+			// Retrieve data
+    		alert("You're Fav Item is, " + localStorage.getItem("favitem"));
+		});
+	});
+} else {
+    alert("Sorry, your browser do not support local storage.");
+}
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+
+
+</head>
+<body>
+
+	<div id="page" data-role="page" data-theme="b" data-add-back-btn="true">
+
+	<div data-role="panel" id="myPanel">
+		<h2>Panel Header</h2>
+		<ul data-role="listview" data-theme="b">
+			<li class="menu"><a href="#">Menu 1</a></li>
+			<li class="menu"><a href="#">Menu 2</a></li>
+			<li class="menu"><a href="#">Menu 3</a></li>
+			<li class="menu"><a href="#">Menu 4</a></li>
+			<li class="menu"><a href="#">Menu 5</a></li>
+			<li class="menu"><a href="#">Menu 6</a></li>
+		</ul>
+		<p>You can close this panel by clicking outside of it, pressing the Esc key, or by swiping.</p>
+	</div>
+
+
+	<div data-role="header" data-theme="c">
+
+		<h1>Welcome</h1>
+		<a href="#myPanel" class="ui-btn ui-btn-inline">Open Panel</a>
+
+	</div>
+
+  <div data-role="header">
+
+  </div>
+
+	<div data-role="content">
+
+		<ul class = "fa-ul" data-role="listview" data-theme="c" data-filter="true">
+			<li><a href="#section1">Section 1</a><i class="fa fa-heart"></i></li>
+      <li><a href="#section2">Section 2</a><i class="fa fa-heart"></i></li>
+			<li><a href="#section3">Section 3</a><i class="fa fa-heart"></i></li>
+			<li><a href="#section4">Section 4</a><i class="fa fa-heart"></i></li>
+			<li><a href="#section5">Section 5</a><i class="fa fa-heart"></i></li>
+			<li><a href="#section6">Section 6</a><i class="fa fa-heart"></i></li>
+			<li><a href="#come1">Come in</a><i class="fa fa-heart"></i></li>
+			<li><a href="#come2">Come in Pt. 2</a><i class="fa fa-heart"></i></li>
+			<li><a href="#come3">Come in Pt. 3</a><i class="fa fa-heart"></i></li>
+			<li><a href="#form">Form</a><i class="fa fa-heart"></i></li>
+			<li><a href="#form2">Form 2</a><i class="fa fa-heart"></i></li>
+			<li><a href="#grid">Grid</a><i class="fa fa-heart"></i></li>
+      <li><a href="#favorites">Web Storage Fav Item</a><i class="fa fa-heart"></i></li>
+      <li><a href="#favorites2">Web Storage Fav List</a><i class="fa fa-heart"></i></li>
+		</ul>
+
+
+
+	</div>
+	<div data-role="footer" data-theme="c">
+		<h4>module 05 Project App &copy; 2020</h4>
+	</div>
+</div>
+
+<div id="section1" data-role="page" data-theme="b" data-add-back-btn="true"  data-transition="flip">
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+	  <h1>Section 1</h1>
+	</div>
+	<div data-role="content">
+	  <h3>Section 1</h3>
+	  <p> Section 1 Info... </p>
+	</div>
+	<div data-role="footer" data-theme="b">
+	  <h4>module 05 Project App &copy; 2020</h4>
+	</div>
+</div>
+
+<div id="section2" data-role="page" data-theme="a" data-add-back-btn="true">
+	<div data-role="header" data-theme="a" data-add-back-btn="true">
+		<h1>Section 2</h1>
+	</div>
+	<div data-role="content">
+	  <h3>Section 2</h3>
+	  <p> Section 2 Info... </p>
+	  <h3>Header</h3>
+	  <p> Section 2 Info... </p>
+	</div>
+	<div data-role="footer" data-theme="a">
+		<h4>module 05 Project App &copy; 2020</h4>
+	</div>
+</div>
+
+<div id="section3" data-role="page" data-theme="a" data-add-back-btn="true">
+	<div data-role="header" data-theme="a" data-add-back-btn="true">
+		<h1>Section 3</h1>
+	</div>
+	<div data-role="content">
+	  <h3>Section 3</h3>
+	  <p> Section 3 Info... </p>
+	  <h3>Header</h3>
+	  <p> Section 3 Info... </p>
+      </div>
+	<div data-role="footer" data-theme="a" >
+	  <h4>module 05 Project App &copy; 2020</h4>
+	</div>
+</div>
+
+<div id="section4" data-role="page" data-theme="a" data-add-back-btn="true">
+	<div data-role="header" data-theme="a" data-add-back-btn="true">
+		<h1>Section 4</h1>
+	</div>
+  <div data-role="content">
+	  <h3>Section 4</h3>
+	  <p> Section 4 Info... </p>
+	  <h3>Header</h3>
+	  <p> Section 4 Info... </p>
+	</div>
+	<div data-role="footer" data-theme="a">
+		<h4>module 05 Project App &copy; 2020</h4>
+	</div>
+</div>
+<div data-role="page" id="section5" data-theme="a" data-add-back-btn="true">
+	<div data-role="header" data-theme="a" data-add-back-btn="true">
+		<h1>Section 5</h1>
+	</div>
+  <div data-role="content">
+	  <h3>Section 5</h3>
+	  <p> Section 5 Info... </p>
+	  <h3>Header</h3>
+	  <p> Section 5 Info... </p>
+	</div>
+	<div data-role="footer" data-theme="a">
+		<h4>module 05 Project App &copy; 2020</h4>
+	</div>
+</div>
+<div data-role="page" id="grid" data-theme="a" data-add-back-btn="true">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+    <h1>Grid</h1>
+  </div>
+  <div data-role="content">Content</div>
+
+	<div class="row">
+	  <div class="column" style="background-color:#aaa;">
+	    <h2>Column 1</h2>
+	    <p>This is Column 1</p>
+	  </div>
+	  <div class="column" style="background-color:#bbb;">
+	    <h2>Column 2</h2>
+	    <p>This is Column 2</p>
+	  </div>
+	  <div class="column" style="background-color:#ccc;">
+	    <h2>Column 3</h2>
+	    <p>This is Column 3</p>
+	  </div>
+	  <div class="column" style="background-color:#ddd;">
+	    <h2>Column 4</h2>
+	    <p>This is Column 4</p>
+	  </div>
+	</div>
+
+  <div data-role="footer" data-theme="a">
+    <h4> App &copy; 2020</h4>
+  </div>
+</div>
+
+
+  <div data-role="footer" data-theme="a">
+    <h4>module 05 Project App &copy; 2020</h4>
+  </div>
+</div>
+
+<div data-role="page" id="come1" data-theme="a" data-add-back-btn="true">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+    <h1>Come in...</h1>
+  </div>
+  <div data-role="content">Content</div>
+  <div data-role="footer" data-theme="a">
+    <h4>module 05 Project App &copy; 2020</h4>
+  </div>
+</div>
+
+
+  <div data-role="footer" data-theme="a">
+    <h4>module 05 Project App &copy; 2020</h4>
+  </div>
+</div>
+
+<div data-role="page" id="come2" data-theme="a" data-add-back-btn="true">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+    <h1>Come in 2</h1>
+  </div>
+  <div data-role="content">Content</div>
+  <div data-role="footer" data-theme="a">
+    <h4>module 05 Project App &copy; 2020</h4>
+  </div>
+</div>
+
+
+  <div data-role="footer" data-theme="a">
+    <h4>module 05 Project App &copy; 2020</h4>
+  </div>
+</div>
+
+<div data-role="page" id="come3" data-theme="a" data-add-back-btn="true">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+    <h1>Come in 3</h1>
+  </div>
+  <div data-role="content">Content</div>
+  <div data-role="footer" data-theme="a">
+    <h4>module 05 Project App &copy; 2020</h4>
+  </div>
+</div>
+
+
+  <div data-role="footer" data-theme="a">
+    <h4>module 05 Project App &copy; 2020</h4>
+  </div>
+</div>
+
+<div data-role="page" id="form" data-theme="a" data-add-back-btn="true">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+		<h1>Form</h1>
+  </div>
+  <div data-role="content">
+			This will test my HTML5 localStorage in my app.
+			</p>
+			<textarea class="localstorage" placeholder="Anything you type here will be saved with HTML5 localStorage." autofocus></textarea>
+			<button class="clear">Clear localStorage</button>
+			<button class="empty">Empty localStorage</button>
+	</div>
+  <div data-role="footer" data-theme="a">
+    <h4>module 05 Project App &copy; 2020</h4>
+  </div>
+</div>
+
+<div data-role="page" id="form2" data-theme="a" data-add-back-btn="true">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+    <h1>Form 2</h1>
+  </div>
+  <div data-role="content">
+		<form id="contactForm" action="" method="POST">
+	  <div class="field">
+	    <label for="name">Name</label>
+	    <input type="text" name="name" id="name">
+	  </div>
+	  <div class="field">
+	    <label for="email">Email</label>
+	    <input type="email" name="email" id="email">
+	  </div>
+	  <div class="field">
+	    <label for="message">Message</label>
+	    <textarea name="message" id="message"></textarea>
+	  </div>
+		<div class="field">
+	    <label for="age">Age</label>
+	    <textarea name="age" id="age"></textarea>
+	  </div>
+		<div class="field">
+	    <label for="city">City</label>
+	    <textarea name="city" id="city"></textarea>
+	  </div>
+	  <div class="field">
+	    <input type="submit" value="send">
+	  </div>
+	</form>
+</div>
+  <div data-role="footer" data-theme="a">
+    <h4>module 05 Project App &copy; 2020</h4>
+  </div>
+</div>
+
+  <div data-role="footer" data-theme="a">
+    <h4>module 05 Project App &copy; 2020</h4>
+  </div>
+</div>
+
+<div data-role="page" id="favorites" data-theme="a" data-add-back-btn="true">
+  <div data-role="header" data-theme="a" data-add-back-btn="true">
+    <h1>Favorite Item</h1>
+  </div>
+  <form>
+      	<label>Favorite Item: <input type="text" id="favitem"></label>
+          <button type="button" class="save">Save Item</button>
+          <button type="button" class="access">Get Item</button>
+      </form>
+
+  <div data-role="footer" data-theme="a">
+    <h4>module 05 Project App &copy; 2020</h4>
+  </div>
+  </div>
+
+  <div data-role="page" id="favorites2" data-theme="a" data-add-back-btn="true">
+    <div data-role="header" data-theme="a" data-add-back-btn="true">
+      <h1>Favorite List</h1>
+    </div>
+
+    <p>Click the button to create the favorite list:</p>
+
+    <button onclick="createItem()">Click first to create list</button>
+
+    <p>Click the button to get the favorite list:</p>
+
+    <button onclick="myFunction()">Get the favorite list</button>
+
+<h1>Favorite list display</h1><br>
+    <p id="demo"></p>
+
+    <div data-role="footer" data-theme="a">
+      <h4>module 05 Project App &copy; 2020</h4>
+    </div>
+    </div>
+
+
+
+</body>
+</html>
+<script>
+(function() {
+
+	var rasm = document.querySelector('.localstorage');
+
+	function supportsLocalStorage() {
+		return typeof(Storage)!== 'undefined';
+	}
+
+	if (!supportsLocalStorage()) {
+		rasm.value = 'Your browser does not support localStorage.';
+	} else {
+		try {
+			setInterval(function() {
+				localStorage.setItem('autosave', rasm.value);
+			}, 1000);
+		} catch (e) {
+			if (e == QUOTA_EXCEEDED_ERR) {
+				alert('Quota exceeded!');
+			}
+		}
+		window.onload = function() {
+
+		  // Check for LocalStorage support.
+		  if (localStorage) {
+
+		    // Add an event listener for form submissions
+		    document.getElementById('contactForm').addEventListener('submit', function() {
+		      // Get the value of the name field.
+		      var name = document.getElementById('name').value;
+
+		      // Save the name in localStorage.
+		      localStorage.setItem('name', name);
+		    });
+
+		  }
+			// Retrieve the users name.
+		  var name = localStorage.getItem('name');
+
+		  if (name != "undefined" || name != "null") {
+		    document.getElementById('welcomeMessage').innerHTML = "Hello " + name + "!";
+		  } else
+		    document.getElementById('welcomeMessage').innerHTML = "Hello!";
+		  }
+		}
+	}
+
+})();
+</script>
