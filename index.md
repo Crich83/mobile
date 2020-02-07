@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+## Welcome to Module 06 Documentation
 
-You can use the [editor on GitHub](https://github.com/Crich83/mobile/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+The main purpose of this site was to practice and learn how to deisgn a mobile application. We were to add a user interface, that included things such as lists, forms, panels, grids, webstorage, and widgets.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Website structure + Descriptions of pages, buttons, users actions
 
-### Markdown
+The main interface top left has a panel widget with a dropdown menu that includes 6 options to choose. Also there is a filter input box, to filter out the listview to find the list item without having to scroll down. Next there is section #1-6 and, 3 "come in sections" that link to a description page that information can be added on as more detailed topics are added. Form listitem is to store, clear, and empty the localstorage. Form 2 is a form to send contact information from user input. The grid listitem has 4 columns with blended colors of each column. Webstorage favorite item, gets and stores favorite item of a user input. Webstorage favorite list listitem is to store and get favorite list of items. I also used theme roller to change the theme of the overall application.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+### URL of Mobile Application
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Crich83/mobile/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+http://sotd.us/craysonrichardson/mobile/module05/mod5proj/mod5proj.html
