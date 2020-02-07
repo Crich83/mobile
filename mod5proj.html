@@ -3,82 +3,9 @@
 <head>
 
 
-<meta charset="UTF-8">
-<title>jQuery Mobile Web App</title>
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-
-<link rel="stylesheet" href="themes/mod5project.min.css" />
-	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.5.min.js"></script>
-
-<script>
-
-function createItem() {
-  localStorage.setItem("mytime", "fav1" + ",fav2" + ",fav3")
-}
-
-function myFunction() {
-  var x = localStorage.getItem("mytime");
-    document.getElementById("demo").innerHTML = x;
-}
-</script>
-
-<script>
-// Check if the localStorage object exists
-if(localStorage) {
-	$(document).ready(function() {
-		$(".save").click(function() {
-			// Get input name
-			var favitem = $("#favitem").val();
-
-			// Store data
-    		localStorage.setItem("favitem", favitem);
-			alert("Your fav item is saved.");
-		});
-		$(".access").click(function() {
-			// Retrieve data
-    		alert("You're Fav Item is, " + localStorage.getItem("favitem"));
-		});
-	});
-} else {
-    alert("Sorry, your browser do not support local storage.");
-}
-</script>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
-
+---
+layout: default
+---
 
 </head>
 <body>
